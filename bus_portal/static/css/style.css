@@ -21,10 +21,12 @@ body {
     padding: 24px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
+
 .logotip {
     width: 80px;
     height: 60px;
 }
+
 /* Навигация */
 .main-navigation {
     background: #2c3e50;
@@ -392,97 +394,10 @@ input[type="date"].form-input {
     margin: 0;
 }
 
-/* Адаптация под мобильные устройства 480px */
-@media (max-width: 480px) {
-    body {
-        padding: 8px;
-    }
 
-    .portal-container {
-        padding: 12px;
-        border-radius: 12px;
-    }
 
-    .registration-form,
-    .login-form {
-        width: 100%;
-        max-width: 100%;
-        padding: 8px 0;
-    }
-
-    .page-title {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .form-input {
-        padding: 10px 12px;
-        font-size: 14px;
-    }
-
-    .submit-button {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .main-navigation {
-        flex-direction: column;
-        gap: 8px;
-        padding: 12px;
-    }
-
-    .nav-link {
-        display: block;
-        text-align: center;
-        width: 100%;
-        padding: 8px 12px;
-    }
-
-    .welcome-title {
-        font-size: 22px;
-    }
-
-    .welcome-subtitle {
-        font-size: 13px;
-    }
-
-    .courses-section {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .course-card {
-        padding: 18px 16px;
-    }
-
-    .action-button {
-        display: block;
-        width: 100%;
-        padding: 12px 20px;
-        text-align: center;
-    }
-
-    .application-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .application-details {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .applications-list {
-        gap: 12px;
-    }
-
-    .application-card {
-        padding: 15px;
-    }
-}
-
-/* Адаптация под экраны 320px */
-@media (max-width: 320px) {
+/* Адаптация под экраны 390px */
+@media (max-width: 390px) {
     .page-title {
         font-size: 18px;
     }
@@ -512,4 +427,92 @@ input[type="date"].form-input {
     .course-description {
         font-size: 13px;
     }
+}
+
+/* Слайдер */
+.slider-block {
+    margin: 30px 0;
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slider-track {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 16px;
+    position: relative;
+}
+
+.slider-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider-slide.active {
+    opacity: 1;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #3498db;
+}
+
+.dot:hover {
+    background: #2980b9;
 }
